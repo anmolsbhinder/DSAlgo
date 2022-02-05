@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#include<stdio.h>
+#include<fstream>
+using namespace std;
+#define FAST ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define MOD 1000000007
+#define endl "\n"
+#define int long long
+#define pb push_back
+#define ss second
+#define ff first
+#define vi vector<int>
+#define all(a) a.begin(),a.end()
+#define MAXN 10000005
+#define BLOCK 555
+#define pii pair<int,int>
+ 
+void run()
+{
+    FAST
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif   
+}
+
+void permutations(string s,int itr)
+{
+    if(s[itr]=='\0')
+    {
+        cout<<s<<endl;
+        return;
+    }
+
+    for(int i=itr; i<s.length(); i++)
+    {
+        swap(s[itr],s[i]);
+        permutations(s, itr+1);
+        swap(s[itr],s[i]);
+    }
+}
+\
+
+int32_t main() 
+{
+    run();
+
+    string ss;
+    cin>>ss;
+    
+    permutations(ss ,0);
+}
