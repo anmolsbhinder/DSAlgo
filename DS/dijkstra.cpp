@@ -398,6 +398,6 @@ int main()
     // g1.addEdge(4,5,1);
     // g1.addEdge(1,5,1);
 
-    g1.path_dir(1);
+    g1.path_dir(2);
     return 0;
 }
